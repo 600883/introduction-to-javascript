@@ -42,5 +42,24 @@
   
     // Insert the element into the HTML page
     document.body.appendChild(paragraphElement);
+
+    function saveMyself(info) {
+        
+        const infoString = JSON.stringify(info);
+        sessionStorage.setItem('myInfo', infoString);
+    
+    }
+    saveMyself(myInfo);
+
+    function getMyself() {
+        const infoString = sessionStorage.getItem("myInfo");
+        const infoObject = JSON.parse(infoString);
+
+        return infoObject;
+    }
+    var retrievedInfo = getMyself();
+    console.log(retrievedInfo);
 })();
+
+
   
