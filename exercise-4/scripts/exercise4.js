@@ -17,6 +17,7 @@ function findHighestNum() {
         }
     }
 
+    
     console.log("The highest number entered is: " + highestNum);
 }
 findHighestNum();
